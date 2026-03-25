@@ -1,5 +1,5 @@
 {% set name = "cloudevents" %}
-{% set version = "1.12.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cloudevents-{{ version }}.tar.gz
-  sha256: 1eb52051309c3228934f86f41d50bd02c0e3d9561e5876e73ad8ad9f98f0d3ef
+  sha256: 3224851b2ac902b868ed4bc1aa10772ada8cdf85f180322b12968d90a1dceef2
 
 build:
   noarch: python
@@ -19,10 +19,12 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
     - deprecation >=2.0,<3.0
     - pydantic >=1.0.0,<3.0
+    - python-dateutil >=2.8.2
 
 test:
   imports:

@@ -1,5 +1,5 @@
 {% set name = "cloudevents" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cloudevents-{{ version }}.tar.gz
-  sha256: df0a105c10d74d0da667013c42931b883cf37af1c639a0cbe1aa32c3761de830
+  sha256: fc52440a1fecde882b3b745361e1c7dd4e044e71a6b719cfec2e2c0aa1a19fa3
 
 build:
   noarch: python
